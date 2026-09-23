@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Suppress benign Vite HMR websocket connection errors in iframe/preview environments
+      window.addEventListener('unhandledrejection', function (e) {
+        var reason = e.reason ? (e.reason.message || String(e.reason)) : '';
+        if (reason.indexOf('WebSocket') !== -1 || reason.indexOf('websocket') !== -1) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('error', function (e) {
+        var msg = e.message || '';
+        if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('websocket') !== -1) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      });
+    </script>
+    <title>DesiReels - Trending Video Discovery & Reels Aggregator</title>
+    <meta name="description" content="Automated video discovery, trending reels syndication, and thumbnail aggregation indexing authorized feeds across YouTube, Vimeo, Dailymotion, and partner networks." />
+    <meta property="og:site_name" content="DesiReels" />
+    <meta property="og:title" content="DesiReels - Trending Video Discovery & Reels Aggregator" />
+    <meta property="og:description" content="Automated video discovery, trending reels syndication, and thumbnail aggregation indexing authorized feeds across YouTube, Vimeo, Dailymotion, and partner networks." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DesiReels - Trending Video Discovery & Reels Aggregator" />
+    <meta name="twitter:description" content="Automated video discovery, trending reels syndication, and thumbnail aggregation indexing authorized feeds across YouTube, Vimeo, Dailymotion, and partner networks." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "DesiReels Video Discovery",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "description": "Automated video discovery, trending reels syndication, and thumbnail aggregation indexing authorized feeds across YouTube, Vimeo, Dailymotion, and partner networks.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

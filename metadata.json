@@ -1,0 +1,7 @@
+{
+  "name": "DesiReels - Trending Video Discovery & Reels Aggregator",
+  "description": "Automated video discovery, trending reels syndication, and thumbnail aggregation indexing authorized feeds across YouTube, Vimeo, Dailymotion, and partner networks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
